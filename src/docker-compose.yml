@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bot:
+    image: artursuleimanov/bot:0.0.1
+    logging:
+      driver: "syslog"
+    container_name: employee_bot
+    volumes:
+      - users_data:/app/models
+    restart: always
+
+volumes:
+  users_data:
